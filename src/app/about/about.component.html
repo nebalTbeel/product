@@ -1,0 +1,28 @@
+<p>hello</p>
+ 
+please enter your name: <input type="text" (keyup.enter) = addArray($event.target.value) value="" #name/>
+<button (click) = "addArray(name.value)" >add name</button>
+<ul>
+<li *ngFor="let obj of data">
+{{obj.id}}
+
+</li>
+
+</ul>
+
+<h1 [class.redclass] = "isActive">Hello</h1>
+<button (click) = "toggle()">Toggle</button>
+<h1 [style.color] = "isActive ? 'red' : 'green' ">Welcome</h1>
+<input [(ngModel)]="ngName" >
+<span> {{ngName}}</span>
+<p *ngIf="isActive"> I am active</p>
+<p *ngIf="!isActive"> I am not active</p>
+
+
+<ul>
+    <li *ngFor="let obj of arraynew">
+    {{obj}}
+    
+    </li>
+    
+    </ul>

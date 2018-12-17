@@ -1,0 +1,39 @@
+<h1>
+  Add Product
+
+  </h1>
+
+
+<label>Product Name: <input [(ngModel)]="name" > <br /><br />
+  <label>Quantity: <input [(ngModel)]="quantity" > <br /><br />
+  
+    <label>All Price: <input [(ngModel)]="AllPrice" > <br /><br />
+      <input type="submit" (click)="addProduct()" value="Add Product" class="form-control"/>
+
+      <br>
+      <br>
+
+      <br>
+
+ 
+ 
+ 
+<table>
+  <thead>
+    <th>Product name</th>
+    <th>Quantity</th>
+    <th>All Price</th>
+  </thead>
+  
+
+  
+     <tr *ngFor="let obj of allProducts " >
+    <td>{{obj.name}}</td>
+    <td>{{obj.quantity}}</td>
+    <td>{{obj.AllPrice}}</td>
+  </tr>
+ 
+</table>
+
+
+
