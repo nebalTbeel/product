@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'add-product',
   templateUrl: './add-product.component.html',
@@ -19,16 +20,28 @@ export class AddProductComponent implements OnInit {
   
   addProduct(){
     this.oneProd = [];
-  /*
-    this.oneProd.push(this.name);
-    this.oneProd.push(this.quantity);
-    this.oneProd.push(this.AllPrice);
-    this.oneProd.push(0);
-    allProducts.push(this.oneProd);*/
+  if(this.name && this.quantity && this.AllPrice){
     this.allProducts.unshift({name :this.name, quantity: this.quantity,AllPrice: this.AllPrice,Allprofit:0 });
-   // pull(this.allProducts, {name :this.name, quantity: this.quantity,AllPrice: this.AllPrice,Allprofit:0 });
     console.log(this.allProducts);
+  }
    
+
+    /*
+   
+    let thead = document.getElementById('thead');
+  
+    thead.append((
+
+`
+      <tr>
+      <td>${this.name}</td>
+      <td>${this.quantity}</td>
+      <td>${this.AllPrice}</td>
+    </tr>
+`
+    ));
+
+*/
 
 }
 
